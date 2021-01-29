@@ -7,7 +7,7 @@ cap = cv2.VideoCapture(0)
 if cap.isOpened() == False:
     print("Error in opening video stream or file")
 #Define the codec for the Video
-fourcc = cv2.VideoWriter_fourcc("XVID")
+fourcc = cv2.VideoWriter_fourcc(*"XVID")
 #Create Video Writer Object
 writer = cv2.VideoWriter('test.avi',fourcc, 30, (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))))
 while cap.isOpened():
